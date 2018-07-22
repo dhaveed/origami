@@ -46,9 +46,14 @@ const routes: Routes = [
         path: 'maps',
         loadChildren: 'app/maps/maps.module#MapsModule'
     },
+    // {
+    //     path: '',
+    //     redirectTo: 'dashboard',
+    //     pathMatch: 'full'
+    // }
     {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'authentication/sign-in',
         pathMatch: 'full'
     }
 ];

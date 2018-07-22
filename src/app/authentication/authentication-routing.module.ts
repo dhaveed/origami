@@ -18,7 +18,7 @@ const routes: Routes = [
     component: SingUpComponent
   },
   {
-    path: 'forget-password',
+    path: 'forgot-password',
     component: ForgetPasswordComponent
   },
   {

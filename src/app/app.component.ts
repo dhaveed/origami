@@ -13,6 +13,8 @@ declare const screenfull: any;
 export class AppComponent implements OnInit {
     previousUrl: string;
 
+    
+
     constructor(private renderer: Renderer2, private router: Router) {
         this.router.events
             .subscribe((event) => {
@@ -25,13 +27,15 @@ export class AppComponent implements OnInit {
                     if (currentUrlSlug) {
                         this.renderer.addClass(document.body, currentUrlSlug);
                     }
-                    this.previousUrl = currentUrlSlug;
+                    // this.previousUrl = currentUrlSlug;
+                    this.previousUrl = 'sign-in';
                 }
             });
 
     }
 
     ngOnInit() {
+        this.previousUrl = "sign-in";
         // ========
         
         $('.theme-light-dark .t-light').on('click', function() {

@@ -1,12 +1,12 @@
 <!-- Page Loader -->
-<div class="page-loader-wrapper">
+<div class="page-loader-wrapper" style="background: #fff;">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/logo.svg" width="48" height="48" alt="Oreo"></div>
-        <p>Please wait...</p>
+        <div class="m-t-30"><img class="animated pulse infinite" src="assets/images/authentication/ent-logo.png" alt="loading"></div>
+        <p style="color: #424242 !important;">Chargement, veuillez patienter...</p>
     </div>
 </div>
 <!-- Overlay For Sidebars -->
-<div class="overlay"></div>
+<!-- <div class="overlay"></div> -->
 
 <div *ngIf="previousUrl != 'sign-in' && previousUrl != 'sign-up' && previousUrl !=  'forget-password' && previousUrl !=  '404' && previousUrl !=  '500' && previousUrl !=  'page-offline' && previousUrl !=  'locked' ">
     <!-- Top Bar -->
