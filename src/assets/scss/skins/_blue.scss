@@ -4,6 +4,8 @@ $blue-400: #60bafd !default;
 $blue-500: #3eacff !default;
 $blue-600: #0d97ff !default;
 $blue-700: #1976d2 !default;
+$blue-alternate: #338CCE !default;
+$blue-secondary: #338BCD !default;
 
 .theme-blue .menu > ul > li > ul.normal-sub > li a:hover,
 .theme-blue .menu > ul > li > ul > li > ul > li a:hover {
@@ -45,7 +47,8 @@ $blue-700: #1976d2 !default;
         }
     }
     .navbar, .page-loader-wrapper{
-        background:$blue-400;
+        // background:$blue-400;
+        background: $blue-alternate;
     }
     .bars {
         color:$white;

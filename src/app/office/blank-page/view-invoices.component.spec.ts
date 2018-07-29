@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SingInComponent } from './sing-in.component';
+import { ViewInvoicesComponent } from './view-invoices.component';
 
-describe('SingInComponent', () => {
-  let component: SingInComponent;
-  let fixture: ComponentFixture<SingInComponent>;
+describe('BlankPageComponent', () => {
+  let component: ViewInvoicesComponent;
+  let fixture: ComponentFixture<ViewInvoicesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SingInComponent ]
+      declarations: [ ViewInvoicesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SingInComponent);
+    fixture = TestBed.createComponent(ViewInvoicesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,18 +1,39 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AdminApiService } from '../../services/admin/admin-api.service';
 
 declare const $: any;
 
 @Component({
   selector: 'app-sing-in',
-  templateUrl: './sing-in.component.html',
-  styleUrls: ['./sing-in.component.css'],
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class SingInComponent implements OnInit {
+export class SignInComponent implements OnInit {
 
   year = (new Date()).getFullYear();
 
-  constructor() { }
+  public login: any = {
+    email: '',
+    password: ''
+  };
+
+  constructor(private _authService:AdminApiService) {
+    this._authService.testHttp("testing").subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err)
+    );
+  }
+
+  /* doLogon(f: NgForm){
+    console.log(f.value);
+  } */
+
+  /* onSubmit() {
+    if (this.user.valid) {
+      console.log("Form Submitted!");
+    }
+  } */
 
   ngOnInit() {
     $("body").addClass("authentication sidebar-collapse");

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SingInComponent } from './sing-in/sing-in.component';
-import { SingUpComponent } from './sing-up/sing-up.component';
-import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { Page404Component } from './page404/page404.component';
 import { Page500Component } from './page500/page500.component';
 import { PageOfflineComponent } from './page-offline/page-offline.component';
@@ -11,15 +11,15 @@ import { LockedComponent } from './locked/locked.component';
 const routes: Routes = [
   {
     path: 'sign-in',
-    component: SingInComponent
+    component: SignInComponent
   },
   {
     path: 'sign-up',
-    component: SingUpComponent
+    component: SignUpComponent
   },
   {
     path: 'forgot-password',
-    component: ForgetPasswordComponent
+    component: ForgotPasswordComponent
   },
   {
     path: '404',

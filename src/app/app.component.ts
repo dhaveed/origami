@@ -27,15 +27,23 @@ export class AppComponent implements OnInit {
                     if (currentUrlSlug) {
                         this.renderer.addClass(document.body, currentUrlSlug);
                     }
+
+                    if(currentUrlSlug == ''){
+                        this.previousUrl = 'sign-in'
+                    } else {
+                        this.previousUrl = currentUrlSlug;
+                    }
+                    
+                    // this.previousUrl = (currentUrlSlug != "") ? currentUrlSlug : 'sign-in';
                     // this.previousUrl = currentUrlSlug;
-                    this.previousUrl = 'sign-in';
+                    // this.previousUrl = 'sign-in';
                 }
             });
 
     }
 
     ngOnInit() {
-        this.previousUrl = "sign-in";
+        // this.previousUrl = "sign-in";
         // ========
         
         $('.theme-light-dark .t-light').on('click', function() {

@@ -1,0 +1,52 @@
+<div class="page-header">
+<div class="page-header-image" style="background-image:url(assets/images/authentication/window-cleaning.jpg)"></div>
+<div class="container">
+    <div class="col-md-12 content-center">
+        <div class="card-plain">'
+            <form class="form">
+                <div class="header">
+                    <div class="logo-container">
+                        <img src="https://entretien640.ca/blogue/wp-content/uploads/2018/05/rsz_logo-large.png" alt="" style="width: 269px; height: 52px;">
+                    </div>
+                    <h5>S'identifier</h5>
+                </div>
+                <div class="content">                                                
+                    <div class="input-group input-lg">
+                        <input type="email" class="form-control" placeholder="Identifiant de connexion" [(ngModel)]="login.email" name="email">
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-account-circle"></i>
+                        </span>
+                    </div>
+                    <div class="input-group input-lg">
+                        <input type="password" placeholder="Mot de passe" class="form-control" [(ngModel)]="login.password" name="password"/>
+                        <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer text-center">
+                    <!-- <a routerLink="/dashboard/main" class="btn btn-primary btn-round btn-lg btn-block ">SIGN IN</a> -->
+                    <button class="btn btn-primary btn-round btn-lg btn-block " type="submit" style="background: #354C73; border-radius: 3px solid #379CD0;">Se Connecter</button>
+                    <!-- <h5><a routerLink="/authentication/forgot-password" class="link">Mot de passe oublié?</a></h5> -->
+                    <h5><a routerLink="/authentication/forgot-password" class="link">Mot de passe oublié?</a></h5>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="Chatra('openChat', true)">Aide</a></li>
+                <li><a href="#" target="_blank">À propos</a></li>
+                <li><a href="javascript:void(0);">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            &copy;{{year}},
+            <span><a href="https://entretien640.ca/" target="_blank" style="color: #379CD0">Entretien Ménager 640</a></span>
+        </div>
+    </div>
+</footer>
+</div>

@@ -1,3 +1,10 @@
+<style>
+    .theme-blue section.content:before {
+    background-color: #338BCD !important;
+}
+
+
+</style>
 <!-- Page Loader -->
 <div class="page-loader-wrapper" style="background: #fff;">
     <div class="loader">
@@ -8,20 +15,24 @@
 <!-- Overlay For Sidebars -->
 <!-- <div class="overlay"></div> -->
 
-<div *ngIf="previousUrl != 'sign-in' && previousUrl != 'sign-up' && previousUrl !=  'forget-password' && previousUrl !=  '404' && previousUrl !=  '500' && previousUrl !=  'page-offline' && previousUrl !=  'locked' ">
+<div *ngIf="previousUrl != 'sign-in' && previousUrl != 'sign-up' && previousUrl !=  'forgot-password' && previousUrl !=  '404' && previousUrl !=  '500' && previousUrl !=  'page-offline' && previousUrl !=  'locked' ">
     <!-- Top Bar -->
-    <nav class="navbar p-l-5 p-r-5">
+    <nav class="navbar p-l-5 p-r-5" style="background: #338CCE;">
         <ul class="nav navbar-nav navbar-left">
             <li>
                 <div class="navbar-header">
                     <a href="javascript:void(0);" class="bars"></a>
-                    <a class="navbar-brand" routerLink="/dashboard/main"><img src="assets/images/logo.svg" width="30" alt="Oreo"><span class="m-l-10">Oreo</span></a>
+                    <a class="navbar-brand" routerLink="/dashboard/main">
+                        <!-- <img src="assets/images/logo.svg" width="30" alt="Oreo"> -->
+                        <span class="m-l-10">ENTRETIEN MÉNAGER 640</span>
+                    </a>
                 </div>
             </li>
-            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-            <li class="hidden-md-down"><a routerLink="/app/calendar" title="Events"><i class="zmdi zmdi-calendar"></i></a></li>
-            <li class="hidden-md-down"><a routerLink="/app/mail-inbox" title="Inbox"><i class="zmdi zmdi-email"></i></a></li>
-            <li><a routerLink="/app/contact" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
+            <!-- <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li> -->
+            <!-- <li class="hidden-md-down"><a routerLink="/app/calendar" title="Schedule"><i class="zmdi zmdi-calendar"></i></a></li> -->
+            <li class="hidden-md-down"><a title="Schedule"><i class="zmdi zmdi-calendar"></i></a></li>
+            <!-- <li class="hidden-md-down"><a routerLink="/app/mail-inbox" title="Inbox"><i class="zmdi zmdi-email"></i></a></li> -->
+            <!-- <li><a routerLink="/app/contact" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li> -->
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
                 <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
@@ -34,7 +45,7 @@
                                         <img class="media-object" src="assets/images/xs/avatar2.jpg" alt="">
                                         <div class="media-body">
                                             <span class="name">Sophia <span class="time">30min ago</span></span>
-                                            <span class="message">There are many variations of passages</span>
+                                            <span class="message">Sophia a commandé un nouveau service de nettoyage</span>
                                         </div>
                                     </div>
                                 </a>
@@ -45,7 +56,7 @@
                                         <img class="media-object" src="assets/images/xs/avatar3.jpg" alt="">
                                         <div class="media-body">
                                             <span class="name">Sophia <span class="time">31min ago</span></span>
-                                            <span class="message">There are many variations of passages of Lorem Ipsum</span>
+                                            <span class="message">Sophia a commandé un nouveau service de nettoyage</span>
                                         </div>
                                     </div>
                                 </a>
@@ -56,7 +67,7 @@
                                         <img class="media-object" src="assets/images/xs/avatar4.jpg" alt="">
                                         <div class="media-body">
                                             <span class="name">Isabella <span class="time">35min ago</span></span>
-                                            <span class="message">There are many variations of passages</span>
+                                            <span class="message">Isabella a commandé un nouveau service de nettoyage</span>
                                         </div>
                                     </div>
                                 </a>
@@ -85,10 +96,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
+                    <li class="footer"> <a href="javascript:void(0);">Voir toutes les notifications</a> </li>
                 </ul>
             </li>
-            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+            <!-- <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
                 <div class="notify">
                     <span class="heartbit"></span>
                     <span class="point"></span>
@@ -180,19 +191,19 @@
                     </li>
                     <li class="footer"><a href="javascript:void(0);">View All</a></li>
                 </ul>
-            </li>
-            <li class="hidden-sm-down">
+            </li> -->
+            <!-- <li class="hidden-sm-down">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search...">
                     <span class="input-group-addon">
                         <i class="zmdi zmdi-search"></i>
                     </span>
                 </div>
-            </li>
+            </li> -->
             <li class="float-right">
                 <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
                 <a routerLink="/authentication/sign-in" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
-                <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
+                <!-- <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a> -->
             </li>
         </ul>
     </nav>
@@ -202,27 +213,25 @@
     <div ngSwitch="{{previousUrl}}">
         <div *ngSwitchDefault>
             <aside id="leftsidebar" class="sidebar">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>Oreo</a></li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user"><i class="zmdi zmdi-account m-r-5"></i>User</a></li>
-                </ul>
+                <!-- <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>Menu</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user"><i class="zmdi zmdi-account m-r-5"></i>Profil</a></li> ->
+                    <li class="nav-item"><a class="nav-link"><i class="zmdi zmdi-account m-r-5"></i>Profil</a></li>
+                </ul> -->
                 <div class="tab-content">
                     <div class="tab-pane stretchRight active" id="dashboard">
-                        <div class="menu">
+                        <div class="menu m-t-30">
                             <ul class="list">
-                                <li>
+                                <li class="m-b-10">
                                     <div class="user-info">
                                         <div class="image"><a routerLink="/sample-pages/profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                                         <div class="detail">
-                                            <h4>Michael</h4>
-                                            <small>UI UX Designer</small>
+                                            <h4>Michaël Calvé</h4>
+                                            <small>Administrateur</small>
                                         </div>
-                                        <a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                        <a title="instagram" href="#"><i class="zmdi zmdi-instagram"></i></a>
                                     </div>
                                 </li>
-                                <li class="header">MAIN</li>
+                                <!-- <li class="header">MAIN</li>
                                 <li routerLinkActive="active open"> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
                                     <ul class="ml-menu">
                                         <li routerLinkActive="active"><a routerLink="/dashboard/main">Main</a></li>
@@ -231,8 +240,20 @@
                                         <li routerLinkActive="active"><a routerLink="/ecommerce/dashboard">Ecommerce</a></li>
                                         <li routerLinkActive="active"><a routerLink="/app/blog-dashboard">Blog</a></li>
                                     </ul>
-                                </li>
-                                <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span> </a>
+                                </li> -->
+                                <li><a href="javascript:void(0);" routerLink="/dashboard/main"><i class="zmdi zmdi-home"></i><span>Tableau de bord</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-chart"></i><span>Rapports</span></a></li>
+                                <li><a href="javascript:void(0);" routerLink="/office/clients"><i class="zmdi zmdi-account"></i><span>Clients</span></a></li>
+
+                                <li><a href="javascript:void(0);"><i class="material-icons">receipt</i><span>Factures</span></a></li>
+                                <li><a href="javascript:void(0);" routerLink="/office/view-invoices"><i class="zmdi zmdi-view-list"></i><span>Soumissions</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="material-icons">group</i><span>Employés</span></a></li>
+
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-group"></i><span>Tous les utilisateurs</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-settings"></i><span>Paramètres du compte</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="zmdi zmdi-help"></i><span>Aide et info</span></a></li>
+
+                                <!-- <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span> </a>
                                     <ul class="ml-menu">
                                         <li routerLinkActive="active"><a routerLink="/app/mail-inbox">Inbox</a></li>
                                         <li routerLinkActive="active"><a routerLink="/app/chat">Chat</a></li>
@@ -310,7 +331,7 @@
                                     <ul class="ml-menu">
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-in">Sign In</a></li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-up">Sign Up</a></li>
-                                        <li routerLinkActive="active"><a routerLink="/authentication/forget-password">Forgot Password</a> </li>
+                                        <li routerLinkActive="active"><a routerLink="/authentication/forgot-password">Forgot Password</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/404">Page 404</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/500">Page 500</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/page-offline">Page Offline</a> </li>
@@ -352,7 +373,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -364,7 +385,7 @@
                                         <div class="image"><a routerLink="/sample-pages/profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                                         <div class="detail">
                                             <h4>Michael</h4>
-                                            <small>UI UX Designer</small>
+                                            <small>Administrateur</small>
                                         </div>
                                         <a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>
                                         <a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
@@ -652,7 +673,7 @@
                                     <ul class="ml-menu">
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-in">Sign In</a></li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-up">Sign Up</a></li>
-                                        <li routerLinkActive="active"><a routerLink="/authentication/forget-password">Forgot Password</a> </li>
+                                        <li routerLinkActive="active"><a routerLink="/authentication/forgot-password">Forgot Password</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/404">Page 404</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/500">Page 500</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/page-offline">Page Offline</a> </li>
@@ -706,7 +727,7 @@
                                         <div class="image"><a routerLink="/sample-pages/profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                                         <div class="detail">
                                             <h4>Michael</h4>
-                                            <small>UI UX Designer</small>
+                                            <small>Administrateur</small>
                                         </div>
                                         <a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a>
                                         <a title="twitter" href="javascript:void(0);"><i class="zmdi zmdi-twitter"></i></a>
@@ -902,7 +923,7 @@
                                     <ul class="ml-menu">
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-in">Sign In</a></li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-up">Sign Up</a></li>
-                                        <li routerLinkActive="active"><a routerLink="/authentication/forget-password">Forgot Password</a> </li>
+                                        <li routerLinkActive="active"><a routerLink="/authentication/forgot-password">Forgot Password</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/404">Page 404</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/500">Page 500</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/page-offline">Page Offline</a> </li>
@@ -956,7 +977,7 @@
                                         <div class="image"><a routerLink="/sample-pages/profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                                         <div class="detail">
                                             <h4>Michael</h4>
-                                            <small>UI UX Designer</small>
+                                            <small>Administrateur</small>
                                         </div>
                                         <a title="facebook" href="javascript:void(0);"><i class="zmdi zmdi-facebook"></i></a>
                                         <a title="twitter" href="javascript:void(0);"><i class="zmdi zmdi-twitter"></i></a>
@@ -1098,7 +1119,7 @@
                                     <ul class="ml-menu">
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-in">Sign In</a></li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/sign-up">Sign Up</a></li>
-                                        <li routerLinkActive="active"><a routerLink="/authentication/forget-password">Forgot Password</a> </li>
+                                        <li routerLinkActive="active"><a routerLink="/authentication/forgot-password">Forgot Password</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/404">Page 404</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/500">Page 500</a> </li>
                                         <li routerLinkActive="active"><a routerLink="/authentication/page-offline">Page Offline</a> </li>
@@ -1152,7 +1173,7 @@
                                         <div class="image"><a routerLink="/sample-pages/profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                                         <div class="detail">
                                             <h4>Michael</h4>
-                                            <small>UI UX Designer</small>
+                                            <small>Administrateur</small>
                                         </div>
                                         <a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>
                                         <a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
@@ -1206,16 +1227,17 @@
             </aside>
         </div>
 
-        <div *ngSwitchCase="previousUrl == 'sign-in' || previousUrl == 'sign-up' || previousUrl ==  'forget-password' || previousUrl ==  '404' || previousUrl ==  '500' || previousUrl ==  'page-offline' || previousUrl ==  'locked' ? previousUrl : '' "></div>
+        <div *ngSwitchCase="previousUrl == 'sign-in' || previousUrl == 'sign-up' || previousUrl ==  'forgot-password' || previousUrl ==  '404' || previousUrl ==  '500' || previousUrl ==  'page-offline' || previousUrl ==  'locked' ? previousUrl : '' "></div>
     </div>
 </div>
 
 <ng-template #elseBlock>
     <aside id="leftsidebar" class="sidebar">
-        <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>Oreo</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user"><i class="zmdi zmdi-account m-r-5"></i>User</a></li>
-        </ul>
+        <!-- <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>Menu</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user"><i class="zmdi zmdi-account m-r-5"></i>Profil</a></li> ->
+            <li class="nav-item"><a class="nav-link"><i class="zmdi zmdi-account m-r-5"></i>Profil</a></li>
+        </ul> -->
         <div class="tab-content">
             <div class="tab-pane stretchRight active" id="dashboard">
                 <div class="menu">
@@ -1225,7 +1247,7 @@
                                 <div class="image"><a routerLink="/sample-pages/profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                                 <div class="detail">
                                     <h4>Michael</h4>
-                                    <small>UI UX Designer</small>
+                                    <small>Administrateur</small>
                                 </div>
                                 <a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>
                                 <a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
@@ -1320,7 +1342,7 @@
                             <ul class="ml-menu">
                                 <li routerLinkActive="active"><a routerLink="/authentication/sign-in">Sign In</a></li>
                                 <li routerLinkActive="active"><a routerLink="/authentication/sign-up">Sign Up</a></li>
-                                <li routerLinkActive="active"><a routerLink="/authentication/forget-password">Forgot Password</a> </li>
+                                <li routerLinkActive="active"><a routerLink="/authentication/forgot-password">Forgot Password</a> </li>
                                 <li routerLinkActive="active"><a routerLink="/authentication/404">Page 404</a> </li>
                                 <li routerLinkActive="active"><a routerLink="/authentication/500">Page 500</a> </li>
                                 <li routerLinkActive="active"><a routerLink="/authentication/page-offline">Page Offline</a> </li>
@@ -1374,7 +1396,7 @@
                                 <div class="image"><a routerLink="/sample-pages/profile"><img src="assets/images/profile_av.jpg" alt="User"></a></div>
                                 <div class="detail">
                                     <h4>Michael</h4>
-                                    <small>UI UX Designer</small>
+                                    <small>Administrateur</small>
                                 </div>
                                 <a title="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a>
                                 <a title="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a>
@@ -1545,7 +1567,7 @@
                                     <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Sophia</span>
-                                        <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                                        <span class="message">Sophia a commandé un nouveau service de nettoyage</span>
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
@@ -1569,7 +1591,7 @@
                                     <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Isabella</span>
-                                        <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                        <span class="message">Isabella a commandé un nouveau service de nettoyage</span>
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
@@ -1581,7 +1603,7 @@
                                     <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">John</span>
-                                        <span class="message">It is a long established fact that a reader</span>
+                                        <span class="message">John a une facture non confirmée</span>
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
@@ -1593,7 +1615,7 @@
                                     <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
                                     <div class="media-body">
                                         <span class="name">Alexander</span>
-                                        <span class="message">Richard McClintock, a Latin professor</span>
+                                        <span class="message">La réservation d'Alexander est due à 14 heures</span>
                                         <span class="badge badge-outline status"></span>
                                     </div>
                                 </div>
@@ -1810,8 +1832,8 @@
     </div>
 </aside>
 
-<div *ngIf="previousUrl != 'sign-in' && previousUrl != 'sign-up' && previousUrl !=  'forget-password' && previousUrl !=  '404' && previousUrl !=  '500' && previousUrl !=  'page-offline' && previousUrl !=  'locked' ">
-    <!-- Chat-launcher -->
+<!-- <div *ngIf="previousUrl != 'sign-in' && previousUrl != 'sign-up' && previousUrl !=  'forgot-password' && previousUrl !=  '404' && previousUrl !=  '500' && previousUrl !=  'page-offline' && previousUrl !=  'locked' ">
+    <!-- Chat-launcher ->
     <div class="chat-launcher"></div>
     <div class="chat-wrapper">
         <div class="card">
@@ -1872,5 +1894,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <router-outlet></router-outlet>

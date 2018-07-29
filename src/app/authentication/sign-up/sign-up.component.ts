@@ -3,15 +3,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 declare const $: any;
 
 @Component({
-  selector: 'app-forget-password',
-  templateUrl: './forget-password.component.html',
-  styleUrls: ['./forget-password.component.css'],
+  selector: 'app-sing-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ForgetPasswordComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
   year = (new Date()).getFullYear();
-  
+
   constructor() { }
 
   ngOnInit() {

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  adminApiUrl: 'apis.entretien640.ca/public/v1'
 };
