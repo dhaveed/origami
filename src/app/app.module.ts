@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
+
 import { AppComponent } from './app.component';
 import { AdminApiService } from './services/admin/admin-api.service';
 
@@ -21,7 +23,8 @@ import { AuthGuard } from './guard/auth/auth.guard';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [
     AdminApiService,

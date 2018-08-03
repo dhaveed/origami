@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  adminApiUrl: 'http://localhost:8000/v1/admin/'
+  // adminApiUrl: 'http://localhost:8000/v1/admin/'
+  adminApiUrl: 'http://localhost/work/em640server/public/v1/admin/'
 };

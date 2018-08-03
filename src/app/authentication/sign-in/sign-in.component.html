@@ -2,7 +2,7 @@
 <div class="page-header-image" style="background-image:url(assets/images/authentication/window-cleaning.jpg)"></div>
 <div class="container">
     <div class="col-md-12 content-center">
-        <div class="card-plain">'
+        <div class="card-plain">
             <form class="form">
                 <div class="header">
                     <div class="logo-container">
@@ -12,13 +12,13 @@
                 </div>
                 <div class="content">                                                
                     <div class="input-group input-lg">
-                        <input type="email" class="form-control" placeholder="Identifiant de connexion" [(ngModel)]="login.email" name="email">
+                        <input type="email" class="form-control" placeholder="Identifiant de connexion" [(ngModel)]="login.email" name="email" validate required>
                         <span class="input-group-addon">
                             <i class="zmdi zmdi-account-circle"></i>
                         </span>
                     </div>
                     <div class="input-group input-lg">
-                        <input type="password" placeholder="Mot de passe" class="form-control" [(ngModel)]="login.password" name="password"/>
+                        <input type="password" placeholder="Mot de passe" class="form-control" [(ngModel)]="login.password" name="password" validate required/>
                         <span class="input-group-addon">
                             <i class="zmdi zmdi-lock"></i>
                         </span>
@@ -26,7 +26,10 @@
                 </div>
                 <div class="footer text-center">
                     <!-- <a routerLink="/dashboard/main" class="btn btn-primary btn-round btn-lg btn-block ">SIGN IN</a> -->
-                    <button class="btn btn-primary btn-round btn-lg btn-block " type="submit" style="background: #354C73; border-radius: 3px solid #379CD0;">Se Connecter</button>
+                    <button class="btn btn-primary btn-round btn-lg btn-block ld-ext-right running" type="submit" style="background: #354C73; border-radius: 3px solid #379CD0;" (click)="doLogon(login)">
+                        Se Connecter
+                        <div class="ld ld-ring ld-spin" style="margin-right: 10px; margin-top: -0.5em" id="loading"></div>
+                    </button>
                     <!-- <h5><a routerLink="/authentication/forgot-password" class="link">Mot de passe oublié?</a></h5> -->
                     <h5><a routerLink="/authentication/forgot-password" class="link">Mot de passe oublié?</a></h5>
                 </div>
