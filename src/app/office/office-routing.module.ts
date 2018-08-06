@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ViewInvoicesComponent } from './view-invoices/view-invoices.component';
 import { ClientsComponent } from './clients/clients.component';
+import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
 
 const routes: Routes = [
     {
@@ -10,7 +11,11 @@ const routes: Routes = [
     },
     {
         path: 'clients',
-        component:ClientsComponent
+        component: ClientsComponent
+    },
+    {
+        path: 'new-invoice',
+        component: NewInvoiceComponent
     },
     {
         path: '',
