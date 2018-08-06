@@ -17,8 +17,249 @@
     <div class="row clearfix">
       <div class="col-lg-12">
         <div class="card">
+          <div class="header">
+            <h2>Filtrer les factures</h2>
+            <ul class="header-dropdown">
+              <li class="refresh">
+                <a role="button" class="boxs-refresh"><i class="zmdi zmdi-refresh"></i></a>
+              </li>
+            </ul>
+          </div>
           <div class="body">
-            <h4>Page pour voir toutes les factures</h4>
+            <form>
+              <div class="row clearfix">
+                <div class="row col-lg-10 col-md-10 col-sm-12">
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Rechercher un mot-clé">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                      <div class="form-group">
+                        <select name="status" class="form-control">
+                          <option value="" disabled>Sélectionnez le statut</option>
+                          <option value="draft">Brouillon</option>
+                          <option value="unpaid">Non payé</option>
+                          <option value="paid">Payé</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                      <div class="form-group">
+                          <select name="status" class="form-control">
+                            <option value="" disabled>Sélectionnez le type de service</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="occasionelle">Occasionelle</option>
+                            <option value="résidentiel">Résidentiel</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                      <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Date d'émission">
+                      </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                  <button type="button" class="btn btn-raised btn-primary waves-effect">FILTRER</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container-fluid">
+    <div class="row clearfix">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="body table-responsive">
+              <table class="table m-b-0">
+                <thead>
+                <tr>
+                  <th>ID de facture</th>
+                  <th data-breakpoints="xs">Date d'émission</th>
+                  <th data-breakpoints="xs">Total ($ CAD)</th>
+                  <th data-breakpoints="xs">Statut</th>
+                  <th data-breakpoints="xs" width="25%;"><!--Actions --></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Résidentiel</span>
+                  </td>
+                  <td>Sept 15, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-success">Paid</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Occasionelle</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <th><span class="badge badge-success">Paid</span></th>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Commercial</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-default">Draft</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Occasionelle</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-default">Draft</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Commercial</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-warning">Unpaid</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Occasionelle</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$500</td>
+                  <td><span class="badge badge-default">Draft</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Résidentiel</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-default">Draft</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Commercial</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-warning">Unpaid</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Résidentiel</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-success">Paid</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                      #EM-2018081028<br>
+                      <span class="text-muted small">Résidentiel</span>
+                  </td>
+                  <td>Aug 10, 2018</td>
+                  <td>$3,227.38</td>
+                  <td><span class="badge badge-warning">Unpaid</span></td>
+                  <td>
+                      <button class="btn btn-primary icon-btn">SEND</button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="material-icons">file_download</i></button>
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-edit"></i></button>                      
+                      <button class="btn btn-icon btn-primary icon-btn btn-icon-mini"><i class="zmdi zmdi-close"></i></button>                      
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row clearfix">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card">
+            <div class="body">
+              <ul class="pagination pagination-info m-b-0 pull-right">
+                <li class="page-item"><a class="page-link"><i class="zmdi zmdi-arrow-left"></i></a></li>
+                <li class="page-item active"><a class="page-link">1</a></li>
+                <li class="page-item"><a class="page-link">2</a></li>
+                <li class="page-item"><a class="page-link">3</a></li>
+                <li class="page-item"><a class="page-link">4</a></li>
+                <li class="page-item"><a class="page-link"><i class="zmdi zmdi-arrow-right"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

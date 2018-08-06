@@ -60,7 +60,7 @@ const routes: Routes = [
     {
         path: 'office',
         loadChildren: 'app/office/office.module#OfficeModule',
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
     },
     // {
     //     path: '',

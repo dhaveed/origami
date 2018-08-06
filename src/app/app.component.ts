@@ -1,9 +1,11 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import {NavigationStart, Router} from '@angular/router';
+import { AdminApiService } from './services/admin/admin-api.service';
 
 declare const $: any;
 declare const jquery: any;
 declare const screenfull: any;
+
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,7 @@ export class AppComponent implements OnInit {
 
     
 
-    constructor(private renderer: Renderer2, private router: Router) {
+    constructor(private renderer: Renderer2, private router: Router, private _authService:AdminApiService) {
         this.router.events
             .subscribe((event) => {
                 if (event instanceof NavigationStart) {
@@ -39,7 +41,10 @@ export class AppComponent implements OnInit {
                     // this.previousUrl = 'sign-in';
                 }
             });
+    }
 
+    logout(){
+        this._authService.logout();
     }
 
     ngOnInit() {

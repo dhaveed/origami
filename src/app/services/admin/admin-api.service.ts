@@ -50,8 +50,10 @@ export class AdminApiService {
     let endpoint = 'auth/logout';
     this.http.get<any>(this.urlFormatter(endpoint), {headers: headers}).subscribe(()=>{
       this._router.navigate(['/authentication/sign-in']);
+      return true;
     }, (err) => {
       this._router.navigate(['/authentication/sign-in']);
+      return false;
     });
   }
 
