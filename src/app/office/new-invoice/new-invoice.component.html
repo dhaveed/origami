@@ -20,7 +20,7 @@
       <div class="col-lg-12">
         <div class="card">
           <div class="header">
-            <h2><strong>Single</strong> Invoice</h2>
+            <h2><strong>{{tabStep}}</strong></h2>
             <ul class="header-dropdown">
               <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                 <ul class="dropdown-menu dropdown-menu-right">
@@ -37,18 +37,18 @@
             </ul>
           </div>
           <div class="body">
-            <h3 class="m-b-0">Invoice Details : <strong class="text-primary">#2015000152</strong></h3>
+            <h3 class="m-b-0">Numéro de facture: <strong class="text-primary">#{{invoiceMeta.billNum}}</strong></h3>
             <ul class="nav nav-tabs">
-              <li class="nav-item inlineblock"><a class="nav-link active" data-toggle="tab" href="#details" aria-expanded="true">Details</a></li>
-              <li class="nav-item inlineblock"><a class="nav-link" data-toggle="tab" href="#notes" aria-expanded="false">Notes</a></li>
-              <li class="nav-item inlineblock"><a class="nav-link" data-toggle="tab" href="#history" aria-expanded="false">History</a></li>
+              <li class="nav-item inlineblock"><a class="nav-link active" data-toggle="tab" href="#createInvoice" aria-expanded="true">Create</a></li>
+              <li class="nav-item inlineblock"><a class="nav-link" data-toggle="tab" href="#notes" aria-expanded="false">Preview</a></li>
+              <li class="nav-item inlineblock"><a class="nav-link" data-toggle="tab" href="#history" aria-expanded="false">Status</a></li>
             </ul>
           </div>
         </div>
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane in active" id="details" aria-expanded="true">
+          <div role="tabpanel" class="tab-pane in active" id="createInvoice" aria-expanded="true">
             
-            <div class="card" id="details">
+            <div class="card" id="createInvoice">
               <div class="body">
                 <form #invoiceDataMeta="ngForm">
                   <div class="row">
@@ -72,12 +72,12 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="table-responsive">
-                      <table class="table table-hover">
+                      <table class="table table-hover" id="invoiceTable" >
                         <thead>
                         <tr>
                           <th>#</th>
-                          <th width="60px">Item</th>
-                          <th></th>
+                          <th>Item</th>
+                          <!-- <th></th> -->
                           <th class="hidden-sm-down">Description</th>
                           <th>Quantity</th>
                           <th class="hidden-sm-down">Unit Cost</th>
@@ -85,44 +85,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td><img src="assets/images/ecommerce/1.png" width="40" alt="Product img"></td>
-                          <td>Simple Black Clock</td>
-                          <td class="hidden-sm-down">Lorem ipsum dolor sit amet.</td>
-                          <td>1</td>
-                          <td class="hidden-sm-down">$380</td>
-                          <td>$380</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td><img src="assets/images/ecommerce/2.png" width="40" alt="Product img"></td>
-                          <td>Brone Candle</td>
-                          <td class="hidden-sm-down">There are many variations of passages of Lorem Ipsum</td>
-                          <td>5</td>
-                          <td class="hidden-sm-down">$50</td>
-                          <td>$250</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td><img src="assets/images/ecommerce/3.png" width="40" alt="Product img"></td>
-                          <td>Wood Simple Clock</td>
-                          <td class="hidden-sm-down">Lorem ipsum dolor sit amet.</td>
-                          <td>2</td>
-                          <td class="hidden-sm-down">$500</td>
-                          <td>$1000</td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td><img src="assets/images/ecommerce/4.png" width="40" alt="Product img"></td>
-                          <td>Unero Small Bag</td>
-                          <td class="hidden-sm-down">Contrary to popular belief, not simply random text</td>
-                          <td>3</td>
-                          <td class="hidden-sm-down">$300</td>
-                          <td>$900</td>
-                        </tr>
+                          <tr *ngFor="let invoice of invoiceList; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>{{invoice.title}}</td>
+                            <td class="hidden-sm-down">{{invoice.desc}}</td>
+                            <td>{{invoice.qty}}</td>
+                            <td class="hidden-sm-down">{{invoice.unit}}</td>
+                            <td>{{invoice.total}}</td>
+                          </tr>
                         </tbody>
                       </table>
+                      <button class="btn btn-lg btn-primary m-l-50 m-t-10" (click)="newRow()">
+                          <i class="zmdi zmdi-plus"></i>
+                        </button>
                     </div>
                   </div>
                 </div>
@@ -130,31 +105,27 @@
                 <div class="row">
                   <div class="col-md-6">
                     <h5>Note</h5>
-                    <!-- <p contenteditable="true">Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.</p> -->
-                      <!-- <form #invoiceDataMeta="ngForm">
                         <p contenteditable="true" name="notes" [(ngModel)]="invoiceMeta.notes"></p>
-                      </form> -->
-                      
-                      <pre>
+                      <!-- <pre>
                         {{ invoiceDataMeta.value | json }}
-                      </pre>
+                      </pre> -->
                   </div>
                   <div class="col-md-6 text-right">
-                    <p class="m-b-0"><b>Sub-total:</b> 2930.00</p>
-                    <p class="m-b-0">Discout: 12.9%</p>
-                    <p class="m-b-0">VAT: 12.9%</p>
-                    <h3 class="m-b-0 m-t-10">USD 2930.00</h3>
+                    <p class="m-b-0"><b>Sub-total:</b> {{getSubtotal()}}</p>
+                    <p class="m-b-0">Discout: 0%</p>
+                    <p class="m-b-0">VAT: {{vat}}%</p>
+                    <h3 class="m-b-0 m-t-10">CAD {{grandTotal}}</h3>
                   </div>
                 </div>
                 <hr>
                 <div class="hidden-print col-md-12 text-right">
                   <button class="btn btn-warning btn-icon  btn-icon-mini btn-round"><i class="zmdi zmdi-print"></i></button>
-                  <button class="btn btn-primary btn-round">Submit</button>
+                  <button class="btn btn-primary btn-round">Enregistrer</button>
                 </div>
               </div>
             </div>
           </div>
-          <div role="tabpanel" class="tab-pane" id="notes" aria-expanded="false">
+          <!-- <div role="tabpanel" class="tab-pane" id="notes" aria-expanded="false">
             <div class="row clearfix">
               <div class="col-lg-6 col-md-12">
                 <div class="card">
@@ -224,9 +195,9 @@
                 <button class="btn btn-primary btn-round">Add Note</button>
               </div>
             </div>
-          </div>
-          <div role="tabpanel" class="tab-pane" id="history" aria-expanded="false">
-            <div class="card" id="details">
+          </div> -->
+          <!-- <div role="tabpanel" class="tab-pane" id="history" aria-expanded="false">
+            <div class="card" id="createInvoice">
               <div class="body">
                 <div class="row">
                   <div class="col-md-6 col-sm-6">
@@ -282,7 +253,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
